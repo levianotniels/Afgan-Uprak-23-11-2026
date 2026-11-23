@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kai's Café</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="#menu">Menu</a>
+      <a href="#specials">Specials</a>
+      <a href="#find">Find Us</a>
+      <a class="cta" href="#book">Book a Table</a>
+    </nav>
+    <div id="hero">
+      <h1>Agan Library</h1>
+      <p class="tagline">Fresh coffee, warm croissants, and the best pancakes in town.</p>
+      <p id="open"></p>
+      <button onclick="alert('Call us at 555 0100 to order!')">Order now</button>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="card wide" id="story">
+      <h2>Our Story</h2>
+      <p>Kai opened this little café in 2020 with one coffee machine and a big dream.</p>
+      <p>Today we bake everything fresh every morning, right here in our own kitchen.</p>
+      <img src="https://www.w3schools.com/w3images/coffeeshop.jpg" alt="Our café with wooden tables" width="400" style="border-radius:20px;">
+    </section>
+
+    <section class="card tall" id="specials">
+      <h2>Today's Specials</h2>
+      <p><strong>Pancake stack</strong> with maple syrup. Was <del>$9</del>, now only <ins>$7</ins>!</p>
+      <p>Try our <mark>new</mark> <em>cherry croissant</em>. It sells out fast.</p>
+      <article>
+        <h3>Cherry Croissant Day</h3>
+        <p>Posted <time datetime="2026-11-10">November 10</time></p>
+        <figure>
+          <img src="https://www.w3schools.com/w3images/cherries.jpg" alt="Fresh cherries">
+          <figcaption>Fresh cherries, baked in at 6 every morning.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2 id="menu">Menu</h2>
+      <p>
+        <img src="https://www.w3schools.com/w3images/croissant.jpg" alt="Croissant" height="120" style="border-radius:16px;">
+        <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="Sandwich" height="120" style="border-radius:16px;">
+        <img src="https://www.w3schools.com/w3images/popsicle.jpg" alt="Popsicle" height="120" style="border-radius:16px;">
+      </p>
+      <table>
+        <tr><th>Item</th><th>Price</th></tr>
+        <tr><td>&#9749; Espresso</td><td>$3</td></tr>
+        <tr><td>&#9749; Cappuccino <span class="tag vegan">Vegan</span></td><td>$4</td></tr>
+        <tr><td>&#129360; Croissant</td><td>$3</td></tr>
+        <tr><td>&#129374; Pancake stack <span class="tag">New</span></td><td>$7</td></tr>
+        <tr><td>&#127826; Cherry croissant <span class="tag">New</span></td><td>$4</td></tr>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>What Guests Say</h2>
+      <blockquote>The best pancakes I have ever had. I come back every Sunday!</blockquote>
+      <p>Sam, from <cite>The Food Blog</cite></p>
+      <blockquote>Cozy place, friendly people, and the coffee is perfect.</blockquote>
+      <p>Alex</p>
+    </section>
+
+    <section class="card">
+      <h2 id="hours">Opening Hours</h2>
+      <dl>
+        <dt>Monday to Friday</dt>
+        <dd>7:00 to 17:00</dd>
+        <dt>Saturday and Sunday</dt>
+        <dd>8:00 to 15:00</dd>
+      </dl>
+      <p>Follow us on <a href="https://www.instagram.com" target="_blank">Instagram</a></p>
+    </section>
+
+    <section class="card wide">
+      <h2 id="find">Find Us</h2>
+      <iframe src="https://maps.google.com/maps?q=Chania&output=embed" title="Map to Kai's Café"></iframe>
+    </section>
+
+    <section class="card wide">
+      <h2>Questions</h2>
+      <details open>
+        <summary>Do you have vegan options?</summary>
+        <p>Yes! Ask for oat milk, and look for the green Vegan tag.</p>
+      </details>
+      <details>
+        <summary>Can I bring my dog?</summary>
+        <p>Of course. We even have dog cookies.</p>
+      </details>
+      <details>
+        <summary>Do you take reservations?</summary>
+        <p>Yes, use the form at the bottom of the page.</p>
+      </details>
+    </section>
+
+    <aside>
+      <h2>Free Wi-Fi</h2>
+      <p>The password is <kbd>croissant123</kbd></p>
+    </aside>
+
+    <section class="card full" id="book">
+      <h2>Book a Table &#127860;</h2>
+      <form action="/action_page.php">
+        <fieldset>
+          <legend>Your details</legend>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="day">Day</label>
+          <input type="date" id="day" name="day">
+          <label for="time">Time</label>
+          <input type="time" id="time" name="time">
+        </fieldset>
+        <label for="guests">Guests</label>
+        <input type="number" id="guests" name="guests" min="1" max="8" value="2">
+        <p>Where do you want to sit?</p>
+        <label><input type="radio" name="seat" value="inside" checked> Inside</label>
+        <label><input type="radio" name="seat" value="terrace"> On the terrace</label>
+        <label><input type="checkbox" name="birthday"> It is a birthday &#127874;</label>
+        <label for="notes">Anything else?</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+        <input type="submit" value="Book my table">
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kai's Café, 15 Harbor Street. Made with &hearts; and coffee.</p>
+  </footer>
+
+  <script>
+  const hour = new Date().getHours();
+  if (hour >= 7 && hour < 17) {
+    document.getElementById("open").innerHTML = "We are open now!";
+  } else {
+    document.getElementById("open").innerHTML = "Closed now. See you tomorrow!";
+  }
+  </script>
+</body>
+</html>
